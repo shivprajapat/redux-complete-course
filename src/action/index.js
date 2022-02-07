@@ -1,6 +1,7 @@
+import { INCREMENT, DECREMENT } from '../constants/index'
 export const increment = () => {
-    return { type: "INCREMENT" }
+    return { type: INCREMENT }
 }
 export const decrement = () => {
-    return { type: "DECREMENT" }
+    return { type: DECREMENT }
 }
