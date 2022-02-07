@@ -5,9 +5,9 @@ export default function PlusMinus() {
         <div>
             <h1>Function Comonents</h1>
             <div className='box'>
-                <button onClick={() => increment()}>-</button>
+                <button onClick={() => increment()}>+</button>
                 <p>0</p>
-                <button onClick={() => decrement()}>+</button>
+                <button onClick={() => decrement()}>-</button>
             </div>
         </div>
     )
