@@ -1,15 +1,20 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { increment, decrement } from '../action/index'
 
-export default class PlusMinusDemo extends Component {
+class PlusMinusDemo extends Component {
+    constructor(props) {
+        super(props);
+        console.log(props, 'props data');
+    }
     render() {
         return (
             <div>
                 <h1>Class Comonents</h1>
                 <div className='box'>
-                    <button onClick={() => decrement()}>-</button>
-                    <p>0</p>
-                    <button onClick={() => increment()}>+</button>
+                    <button onClick={() => this.props.decrement(1)}>-</button>
+                    <p>{this.props.count}</p>
+                    <button onClick={() => this.props.increment(2)}>+</button>
                 </div>
             </div>
         )
@@ -28,3 +33,5 @@ const mapDispatchToProps = (dispatch => {
         decrement: (num) => dispatch(decrement(num))
     }
 })
+
+export default connect(mapStateToProps, mapDispatchToProps)(PlusMinusDemo);

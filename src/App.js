@@ -4,7 +4,7 @@ import PlusMinusDemo from './components/PlusMinusDemo';
 
 const App = () => {
   return <div className='App'>
-    <PlusMinus />
+    {/* <PlusMinus /> */}
     <PlusMinusDemo />
   </div>
 };
