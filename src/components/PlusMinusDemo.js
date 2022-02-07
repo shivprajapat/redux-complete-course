@@ -16,6 +16,11 @@ export default class PlusMinusDemo extends Component {
     }
 }
 
+const mapStateToProps = (state) => {
+    return {
+        count: state.changeCount
+    }
+}
 
 const mapDispatchToProps = (dispatch => {
     return {
