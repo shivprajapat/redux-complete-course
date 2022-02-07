@@ -5,9 +5,9 @@ const changeCount = (state = initialState, action) => {
     console.log(action);
     switch (action.type) {
         case INCREMENT:
-            return state + 1;
+            return state + action.payload;
         case DECREMENT:
-            return state - 1;
+            return state - action.payload;
         default:
             return state;
 
