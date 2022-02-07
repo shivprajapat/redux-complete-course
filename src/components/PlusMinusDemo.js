@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { increment, decrement } from '../action/index'
 
 export default class PlusMinusDemo extends Component {
     render() {
@@ -6,11 +7,19 @@ export default class PlusMinusDemo extends Component {
             <div>
                 <h1>Class Comonents</h1>
                 <div className='box'>
-                    <button>-</button>
+                    <button onClick={() => decrement()}>-</button>
                     <p>0</p>
-                    <button>+</button>
+                    <button onClick={() => increment()}>+</button>
                 </div>
             </div>
         )
     }
 }
+
+
+const mapDispatchToProps = (dispatch => {
+    return {
+        increment: (num) => dispatch(increment(num)),
+        decrement: (num) => dispatch(decrement(num))
+    }
+})
